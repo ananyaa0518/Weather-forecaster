@@ -1,0 +1,43 @@
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background-color: rgb(202, 57, 81);
+}
+.big-container {
+  background-color: white;
+}
+.small-container {
+  width: 80%;
+  height: 80%;
+  color: #058cd7;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+}
+.very-small-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: blue;
+  padding: 20px;
+}
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+p {
+  font-size: 24px;
+  font-weight: 500;
+}
+.btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 100px;
+  background-color: #058cd7;
+  border: none;
+  color: aliceblue;
+  font-size: 20px;
+}
+/*responsive queries*/
