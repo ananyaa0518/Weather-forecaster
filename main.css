@@ -1,43 +1,67 @@
 body {
-  font-family: "Bebas Neue", sans-serif;
-  background-color: rgb(202, 57, 81);
+  font-family: Poppins, sans-serif;
+  background-color: rgb(239, 236, 236);
 }
-.big-container {
-  background-color: white;
+.main {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0px;
 }
-.small-container {
-  width: 80%;
-  height: 80%;
-  color: #058cd7;
-  margin: 50px auto;
-  text-align: center;
+.right-bar {
+  background-color: rgb(167, 173, 172);
+  width: 100px;
+  height: 100vh;
+}
+.left-bar {
+  background-color: rgb(135, 157, 131);
+  width: 350px;
+  height: 100vh;
+}
+.center-bar {
+  background-color: beige;
+  width: 1000px;
+  height: 100vh;
+}
+.top-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
   padding: 20px;
-  background-color: black;
 }
-.very-small-container {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  color: blue;
+.weather {
+  background-color: aqua;
+  width: 470px;
+  height: 300px;
+  border-radius: 20px;
+}
+.air-quality {
+  background-color: rgb(212, 116, 52);
+  width: 470px;
+  height: 300px;
+  border-radius: 20px;
+}
+.bottom-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
   padding: 20px;
 }
-h1 {
-  font-size: 50px;
-  font-weight: bold;
+.tommorow {
+  background-color: aqua;
+  width: 470px;
+  height: 300px;
+  border-radius: 20px;
 }
-p {
-  font-size: 24px;
-  font-weight: 500;
+.temperature {
+  background-color: rgb(212, 116, 52);
+  width: 470px;
+  height: 300px;
+  border-radius: 20px;
 }
-.btn {
-  display: block;
-  width: 200px;
-  height: 50px;
-  margin: 20px auto;
-  border-radius: 100px;
-  background-color: #058cd7;
-  border: none;
-  color: aliceblue;
-  font-size: 20px;
-}
-/*responsive queries*/
