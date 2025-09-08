@@ -6,24 +6,70 @@
     <title>Weather-forecaster 👻</title>
     <link href="index.css" rel="stylesheet"></link>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <body>
+    <div class="circles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clouds">
+      <div class="cloud small"></div>
+      <div class="cloud medium"></div>
+      <div class="cloud large"></div>
+    </div>
+    <div class="sun"></div>
+    <div class="moon"></div>
     <div class="center-container">
       <h1>Weather-forecaster</h1>
-      <h2>Finding what will be the weather today??</h2>
+      <h2>Finding what will be the weather today?</h2>
       <div class="container">
         <p>Name:</p>
-<input text="text" id="name" placeholder="Enter your name:" />
+        <input type="text" id="name" placeholder="Enter your name:" />
       </div>
       <div class="container">
         <p>Location:</p>
-              <input text="text" id="city" placeholder="Enter the location:" />
+        <input type="text" id="city" placeholder="Enter the location:" />
       </div>
-
-      <button class="butn" >Check Weather</button>
+      <button class="butn">Check Weather</button>
     </div>
-    <script></script>
+    <footer>
+      <p>@2025 Made by Ananyaa</p>
+      <div class="social-links">
+        <a href="https://x.com/wanderer543"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/ananyaa1805/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ananyaa0518"><i class="fab fa-github"></i></a>
+      </div>
+    </footer>
+    <script>
+      document.querySelector(".butn").addEventListener("click", () => {
+        alert("hmm, the data is being fetched");
+        console.log("new page opened");
+        window.location.href = "main.html";
+      });
+      // JavaScript to toggle sun and moon based on time of day
+      const hour = new Date().getHours();
+      const sun = document.querySelector('.sun');
+      const moon = document.querySelector('.moon');
+      if (hour > 6 && hour < 18) {
+        // Daytime (6 AM to 6 PM)
+        moon.style.display = 'none';
+        sun.style.display = 'block';
+      } else {
+        // Nighttime (6 PM to 6 AM)
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+      }
+    </script>
   </body>
 </html>
