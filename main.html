@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Current Weather</title>
+    <title>Current Weather 🫧</title>
     <link href="main.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,30 +19,42 @@
   </head>
   <body>
     <div class="main">
-      <div class="left-bar">
-        <div>
-          <h3>weather</h3>
-          <h5>location</h5>
+      <div class="bento-row">
+        <div class="weather-info">
+          <h3 id="current-weather">weather</h3>
+          <h5 id="location">location</h5>
+          <div class="weather-icon">
+            <img id="icon" src="" alt="Weather Icon" />
+          </div>
+          <p id="current-temp"></p>
+          <p id="weather-description"></p>
+        </div>
+        <div class="metrics">
+          <h4>Additional Metrics</h4>
+          <p>Humidity:<span id="humidity"></span></p>
+          <p>Wind-Speed:<span id="wind-speed"></span></p>
+          <p>Pressure:<span id="pressure"></span></p>
         </div>
       </div>
       <div class="center-bar">
         <div class="top-section">
-          <div class="search-bar">
-            <input type="text" placeholder="Search city..." />
-            <button class="search">Search</button>
+         
+        <div class="middle-section">
+          <div class="forecast-day">
+            <h3>Today's Forecast</h3>
+            <div id="hourly-forecast" class="hourly-scroll"></div>
           </div>
         </div>
-        <div class="middle-section">
-          <div class="weather"></div>
-          <div class="air-quality"></div>
-        </div>
-        <div class="bottom-section">
-          <div class="temperature"></div>
-          <div class="tommorow"></div>
+        <div class="forecast-week">
+          <h3>7-Day Forecast</h3>
+          <div id="forecast-container"></div>
         </div>
       </div>
-      <div class="right-bar"></div>
     </div>
+
+    <button class="butn">Back</button>
+    <script src="main .js"></script>
+
     <footer>
       <p>@2025 Made by Ananyaa</p>
       <div class="social-links">

@@ -116,7 +116,7 @@ footer p {
 }
 
 .social-links a:hover {
-  color: #3498db; /* Light blue accent */
+  color: #3498db;
 }
 
 /* Mobile Responsiveness */
@@ -150,7 +150,6 @@ footer p {
   }
 }
 
-/* Animated Background Elements */
 .circles {
   position: absolute;
   top: 0;
@@ -164,7 +163,7 @@ footer p {
 .circles span {
   position: absolute;
   display: block;
-  background: rgba(52, 152, 219, 0.2); /* Translucent light blue */
+  background: rgba(52, 152, 219, 0.2);
   animation: animate 25s linear infinite;
   bottom: -150px;
   border-radius: 50%;

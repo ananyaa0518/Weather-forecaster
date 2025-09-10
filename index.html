@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather-forecaster 👻</title>
+    <title>Weather-forecaster 🫧</title>
     <link href="index.css" rel="stylesheet"></link>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,20 +53,25 @@
     </footer>
     <script>
       document.querySelector(".butn").addEventListener("click", () => {
-        alert("hmm, the data is being fetched");
         console.log("new page opened");
+        const name=document.getElementById("name").value;
+        const city=document.getElementById("city").value;
+        if(city ==="" || name===""){
+          alert("Please enter all the details");
+          return;
+        }else{
         window.location.href = "main.html";
-      });
-      // JavaScript to toggle sun and moon based on time of day
+        localStorage.setItem("name",document.getElementById("name").value);
+        localStorage.setItem("city",document.getElementById("city").value)
+     } });
       const hour = new Date().getHours();
       const sun = document.querySelector('.sun');
       const moon = document.querySelector('.moon');
       if (hour > 6 && hour < 18) {
-        // Daytime (6 AM to 6 PM)
         moon.style.display = 'none';
         sun.style.display = 'block';
       } else {
-        // Nighttime (6 PM to 6 AM)
+        
         sun.style.display = 'none';
         moon.style.display = 'block';
       }
