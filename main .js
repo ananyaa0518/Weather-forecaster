@@ -1,11 +1,9 @@
 "use strict";
-document.querySelector(".butn").addEventListener("click", () => {
-  console.log("old page opened");
-  window.location.href = "index.html";
-});
 document.addEventListener("DOMContentLoaded", function () {
   const API_key = "b94f3eaf6b9ebb14fd95cb363c90a6e0";
-  const location = localStorage.getItem("city") || "New York";
+  const name = localStorage.getItem("name") || "User";
+  document.getElementById("name").textContent = name;
+  const location = localStorage.getItem("city") || "India";
   const locationNameEl = document.getElementById("location");
   const currentTempEl = document.getElementById("current-temp");
   const weatherDescriptionEl = document.getElementById("weather-description");
@@ -15,10 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const iconEl = document.getElementById("icon");
   const hourlyForecastContainer = document.getElementById("hourly-forecast");
   const dailyForecastContainer = document.getElementById("forecast-container");
-  const backBtn = document.querySelector(".butn");
-  const searchBtn = document.querySelector(".search");
-  const searchInput = document.getElementById("search-city");
-
   async function fetchWeatherData(city) {
     try {
       const response = await fetch(
@@ -117,12 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial load
   loadWeather(location);
-
-  // Search functionality
-  searchBtn.addEventListener("click", function () {
-    const city = searchInput.value.trim();
-    if (city) {
-      loadWeather(city);
-    }
-  });
+});
+document.querySelector(".butn").addEventListener("click", () => {
+  console.log("old page opened");
+  window.location.href = "index.html";
 });

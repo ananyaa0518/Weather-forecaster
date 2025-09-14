@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Current Weather 🫧</title>
     <link href="main.css" rel="stylesheet" />
+    <link href="animation.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,36 +19,49 @@
     />
   </head>
   <body>
+    <div class="circles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clouds">
+      <div class="cloud small"></div>
+      <div class="cloud medium"></div>
+      <div class="cloud large"></div>
+    </div>
     <div class="main">
       <div class="bento-row">
         <div class="weather-info">
-          <h3 id="current-weather">weather</h3>
+          <h2>Hello,<span id="name"></span></h2>
+          <h1 id="current-weather">Weather</h1>
           <h5 id="location">location</h5>
           <div class="weather-icon">
             <img id="icon" src="" alt="Weather Icon" />
           </div>
           <p id="current-temp"></p>
           <p id="weather-description"></p>
+          <h2>Additional Metrics</h2>
+          <p>Humidity: <span id="humidity"> </span></p>
+          <p>Wind-Speed: <span id="wind-speed"> </span></p>
+          <p>Pressure: <span id="pressure"> </span></p>
         </div>
-        <div class="metrics">
-          <h4>Additional Metrics</h4>
-          <p>Humidity:<span id="humidity"></span></p>
-          <p>Wind-Speed:<span id="wind-speed"></span></p>
-          <p>Pressure:<span id="pressure"></span></p>
-        </div>
-      </div>
-      <div class="center-bar">
-        <div class="top-section">
-         
-        <div class="middle-section">
+
+        <div class="section">
           <div class="forecast-day">
             <h3>Today's Forecast</h3>
             <div id="hourly-forecast" class="hourly-scroll"></div>
           </div>
-        </div>
-        <div class="forecast-week">
-          <h3>7-Day Forecast</h3>
-          <div id="forecast-container"></div>
+          <div class="forecast-week">
+            <h3>7-Day Forecast</h3>
+            <div id="forecast-container"></div>
+          </div>
         </div>
       </div>
     </div>
